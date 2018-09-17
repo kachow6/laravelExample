@@ -48,6 +48,20 @@
                 font-size: 60px;
             }
 
+            .data > p {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .links {
+                margin-top: 40px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -69,6 +83,21 @@
             <div class="content">
                 <div class="header m-b-md">
                     Example: Connecting to a Database
+                </div>
+
+                @if (count($data) > 0)
+                    <div class="data">
+                        <h1>Here are some actors:</h1>
+                        @foreach ($data as $actor)
+                            <p>{{ $actor->first_name }} {{ $actor->last_name }}<p>
+                        @endforeach
+                    </div>
+                @else
+                    <h1>No data to display</h1>
+                @endif
+
+                <div class="links">
+                    <a href="{{ url('/') }}">back</a>
                 </div>
             </div>
         </div>

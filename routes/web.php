@@ -11,11 +11,10 @@
 |
 */
 
+// A basic route
 Route::get('/', function () {
     return view('welcome');
 });
 
-// An example of how routing works
-Route::get('/example', function () {
-    return view('example');
-});
+// A route using a controller
+Route::get('example', 'ExampleController@index');
