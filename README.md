@@ -41,7 +41,7 @@ package manager and establish a DB connection to our basic web app from a local 
     **Note3:** Since we are loading PHP7 module in Apache, the configs should be modified to match
     the updated php7 syntax. Here is what mine looks like as an example:
 
-    > # PHP7 module
+    > \# PHP7 module
     > LoadModule php7_module "C:/Program Files/php/php7apache2_4.dll"
     > AddType application/x-httpd-php .php
     > PHPIniDir "C:/Program Files/php"
