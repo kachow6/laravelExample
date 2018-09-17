@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// An example of how routing works
+Route::get('/example', function () {
+    return view('example');
+});
