@@ -1,6 +1,6 @@
-# Sample Laravel Project
+# Sample Laravel Project From Scratch
 
-## Laravel Project From Scratch Guide - Kevin Chow 2018-09-16
+## Kevin Chow 2018-09-16
 
 Before you setup a new Laravel project, we need to setup a local PHP environment,
 which will be required for local testing/installation. Laravel has its own built in
@@ -41,9 +41,9 @@ package manager and establish a DB connection to our basic web app from a local 
     **Note3:** Since we are loading PHP7 module in Apache, the configs should be modified to match
     the updated php7 syntax. Here is what mine looks like as an example:
 
-    > \# PHP7 module
-    > LoadModule php7_module "C:/Program Files/php/php7apache2_4.dll"
-    > AddType application/x-httpd-php .php
+    > \# PHP7 module <br />
+    > LoadModule php7_module "C:/Program Files/php/php7apache2_4.dll" <br />
+    > AddType application/x-httpd-php .php <br />
     > PHPIniDir "C:/Program Files/php"
 
     If this tutorial is done correctly, you should see the PHP info page on
