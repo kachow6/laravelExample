@@ -12,6 +12,7 @@ package manager and establish a DB connection to our basic web app from a local 
 ## Setup guide
 
 1. Download a copy of the newest stable version of PHP (7.2.10)
+
     -the windows VC15 x64 Thread Safe version, along with other versions is found at:
     https://windows.php.net/download/
 
@@ -51,6 +52,7 @@ package manager and establish a DB connection to our basic web app from a local 
 
 4. To configure Laravel, we will install Composer package manager. Download the setup.exe file here:
     https://getcomposer.org/download/
+    
     -Make sure the CLI-PHP php.exe matches the one we installed earlier
 
 5. I used the tutorial here: https://laravel.com/docs/5.7. You can follow along to get your Laravel running.
@@ -60,4 +62,26 @@ package manager and establish a DB connection to our basic web app from a local 
 
     2. Run the "php artisan serve" command to turn on your local Laravel web server.
     If everything has been configured correctly, you should see the project appear at http://localhost:8000/
+
+6. We will need to setup a local MySQL database so we can develop using non-production data. Here is the download link:
+    https://dev.mysql.com/downloads/mysql/
     
+    -I chose the MySQL Server Only download because I already have preferred MySQL clients, DBeaver (https://dbeaver.io/download/) and HeidiSQL (https://www.heidisql.com/download.php).
+    I recommend HeidiSQL as a good starting DB client because it's relatively simple and quick to learn.
+
+    **Important:** If you want to use a DB client besides MySQL Workbench then you WILL have issues setting up a connection to your local database.
+    The 8.0.4 MySQL update changes the default_authentication_plugin setting to use the caching_sha2_password plugin which most DB clients do not support.
+    In order to configure this correctly you will have to:
+
+    1. Modify the C:\ProgramData\MySQL\MySQL Server 8.0\my.ini file to use the "default_authentication_plugin=mysql_native_password" setting. This will change the default configurations when a new MySQL instance is generated
+
+    2. Modify the default DB admin user that you created when installing MySQL by running this command in the MySQL command line client:
+    
+    > "ALTER USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';"
+
+    The username and password will be your login credentials when you attempt to login to your local DB at default port 3306. 
+
+    3. Restart your instance of MySQL by running the "net stop MySQL80" and "net start MySQL80" commands from your command line.
+    MySQL80 is the default MySQL 8.0 naming convention for the windows web service background process, but may appear under a different name, so use whatever appears. 
+    
+    If this tutorial is done correctly, you should be able to successfully connect to your local MySQL DB from whatever DB client you are using
