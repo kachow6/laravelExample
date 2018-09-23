@@ -62,7 +62,11 @@ package manager and establish a DB connection to our basic web app from a local 
     1. Download the Laravel installer using Composer using this command:
      composer global require "laravel/installer".
 
-    2. Run the "php artisan serve" command to turn on your local Laravel web server.
+    2. Now, create a new Laravel project using the command: laravel new projectName
+    -If you clone this project, you will need to create your own .env file with your own app key by following these steps:
+    https://stackoverflow.com/questions/38602321/cloning-laravel-project-from-github
+
+    3. Run the "php artisan serve" command to turn on your local Laravel web server.
     If everything has been configured correctly, you should see the project appear at http://localhost:8000/.
 
 6. We will need to setup a local MySQL database so we can develop using non-production data. Here is the download link:
