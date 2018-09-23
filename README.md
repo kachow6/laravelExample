@@ -19,11 +19,13 @@ package manager and establish a DB connection to our basic web app from a local 
 2. We need to download Apache web server to create our local PHP web server. Use this tutorial:
     https://www.sitepoint.com/how-to-install-apache-on-windows/
 
-    **Note1:** The file lines are different for the latest Apache version (2.4.34) but just use
+    **Note1:** Start at step 2 for the Apache tutorial.
+
+    **Note2:** The file lines are different for the latest Apache version (2.4.34) but just use
     a search command to file the right config lines. The most important thing here is defining
     your ROOT path correctly in conf/ini files and in your path env variable.
 
-    **Note2:** To start/stop your Apache server, run the httpd -k start/stop command from your
+    **Note3:** To start/stop your Apache server, run the httpd -k start/stop command from your
     \Apache24\bin folder. This should be the same directory you ran your install command.
 
     If this tutorial is done correctly, you should see a "Apache is working!" message on
