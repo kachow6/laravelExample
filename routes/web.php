@@ -18,3 +18,7 @@ Route::get('/', function () {
 
 // A route using a controller
 Route::get('example', 'ExampleController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
